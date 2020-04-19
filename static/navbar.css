@@ -1,0 +1,39 @@
+
+.navbar{
+    width: 100%;
+    max-width: 960px;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.navbar::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.home{
+    width: 13%;
+    height: 32px;
+    padding: 8px 8px 0 5px;
+    float: left;
+    text-align: center;
+}
+.items-left{
+    width: 38%;
+    height: 32px;
+    padding: 8px 5px 0 5px;
+    float: left;
+}
+
+.items-right{
+    float:right;
+    width: 23%;
+    height: 32px;
+    padding: 8px 5px 0 5px;
+    text-align: center;
+}
+
+.items-right a, .items-left a {
+    padding: 0 5px;
+}

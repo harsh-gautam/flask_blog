@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#main{
+    max-width: 960px;
+    width: 100%;
+    margin: 5px auto;
+    padding: 0;
+    border: 1px solid black;
+}
+
+.content{
+    width: 78%;
+    margin: 0;
+    padding-left: 10px;
+    float: left;
+}
+
+#main::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.sidebar{
+    border-left: 1px solid black;
+    width: 20%;
+    float: right;
+}

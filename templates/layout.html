@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% if title %}
+            <title>Flask Blog - {{ title }}</title>
+        {% else %}
+            <title>Flask Blog</title>
+        {% endif %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='sidebar.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    </head>
+    <body>
+        <div class="navbar">
+            <a class='home' href='/'>Flask Blog</a>
+            <div class="items-left">
+                <a href="/">Home</a>
+                <a href="/">About</a>
+            </div>
+            <div class="items-right">
+                <a href="/">Login</a>
+                <a href="/">Register</a>
+            </div>
+        </div>
+        <div id='main'>
+            <div class='content'>
+                {% block content %}{% endblock %}
+            </div>
+            <div class='sidebar'></div>
+        </div>
+        
+    </body>
+</html>
