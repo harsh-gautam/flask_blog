@@ -18,15 +18,21 @@
                 <a href="/">About</a>
             </div>
             <div class="items-right">
-                <a href="/">Login</a>
-                <a href="/">Register</a>
+                <a href="{{ url_for('login') }}">Login</a>
+                <a href="{{ url_for('register') }}">Register</a>
             </div>
         </div>
         <div id='main'>
             <div class='content'>
                 {% block content %}{% endblock %}
             </div>
-            <div class='sidebar'></div>
+            <div class='sidebar'>
+                <h2>Sidebar</h2>
+                <ul>
+                    <li>item 1</li>
+                    <li>item 1</li>
+                </ul>
+            </div>
         </div>
         
     </body>

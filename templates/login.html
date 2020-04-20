@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+    <form class="form-container" method="POST" action="">
+        <fieldset>
+            <legend class="form-title">Login</legend>
+            <div class='form-group'>
+                {{ form.email.label }}
+                {{ form.email}}
+            </div>
+            <div class='form-group'>
+                {{ form.password.label }}
+                {{ form.password}}
+            </div>
+            <div class='form-group'>
+                {{ form.remember}}
+                {{ form.remember.label }}
+            </div>
+        </fieldset>
+        <div class='form-group'>
+            {{ form.submit }}
+        </div>
+    </form>
+{% endblock content %}
