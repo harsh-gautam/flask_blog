@@ -11,6 +11,12 @@ body{
     border: 1px solid black;
 }
 
+#main::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
 .content{
     width: 78%;
     margin: 0;
@@ -18,15 +24,50 @@ body{
     float: left;
 }
 
-#main::after{
-    content: "";
-    display: block;
-    clear: both;
-}
-
 .sidebar{
     border-left: 1px solid black;
     width: 18%;
+    height: inherit;
     float: right;
     padding: 1%;
+}
+
+.success{
+    width: 50%;
+    height: 20px;
+    background-color: cadetblue;
+}
+
+.form{
+    width: 70%;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.form-group{
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    margin: 5px 0;
+}
+fieldset{
+    width: 100%;
+    padding: 15px 10px;
+}
+
+input{
+    float: right;
+    margin-right: 150px;
+    padding: 1%;
+}
+
+.error{
+    display: inline-block;
+    color: red;
+    font-size: 0.7em;
+    float: right;
+}
+
+.remember-me{
+    float: none;
 }
