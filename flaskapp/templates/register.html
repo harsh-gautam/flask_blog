@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 {% block content %}
     <form class="form" method="POST" action="">
+        {{ form.csrf_token }}
         <fieldset>
             <legend class="form-title">Register Now</legend>
             <div class='form-group'>

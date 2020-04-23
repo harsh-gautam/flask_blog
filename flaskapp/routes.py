@@ -1,7 +1,7 @@
-from flask import Flask, render_template, url_for, flash, redirect
-from forms import RegistrationForm, LoginForm
-app = Flask(__name__)
-app.config['SECRET_KEY'] = '23jbhbh21h1gvbdv12g3vjdgva7atd12hj8asd'
+from flaskapp import app
+from flask import render_template, url_for, flash, redirect
+from flaskapp.forms import LoginForm, RegistrationForm
+from flaskapp.database import User, Posts
 
 posts = [
     {
@@ -39,6 +39,3 @@ def register():
 def login():
     form = LoginForm()
     return render_template('login.html', title='Login', form=form)
-
-if __name__ == '__main__':
-    app.run(debug=True)
